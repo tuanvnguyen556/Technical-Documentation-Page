@@ -17,10 +17,13 @@
     .nav-main {
         display: flex;
         flex-direction: column;
+        overflow-y: auto;
+        white-space:nowrap;
+        height: 100%;
     }
 
     .nav-main section {
-        height: 2.7rem;
+        height: 2.8rem;
         border-bottom: 1px solid rgb(77, 78, 83);
     }
 
