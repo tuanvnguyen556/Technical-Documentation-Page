@@ -1,33 +1,84 @@
-@media (min-width: 820px){
-    #navbar{
-        position:fixed;
-        left:0;
+@media (width > 820px) {
+
+    /*Navigation bar is on the left side of the screen*/
+    #navbar {
+        position: fixed;
+        left: 0;
         top: 0;
         bottom: 0;
         width: 300px;
         border-right: 3px solid rgb(77, 78, 83);
         display: flex;
         flex-direction: column;
+        z-index: 999;
+        background-color: white;
     }
-    #navbar section{
-        height: 2.65rem;
+
+    .nav-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-main section {
+        height: 2.7rem;
         border-bottom: 1px solid rgb(77, 78, 83);
     }
-    
-    #navbar header{
+
+    #navbar header {
         font-size: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 75px;
+        height: 65px;
         border-bottom: 1px solid rgb(77, 78, 83);
         color: black;
         font-size: 1.8rem;
     }
-    
-    .nav-section p{
-        text-indent: 2rem;
+}
+
+@media (width < 820px) {
+    .nav-main {
+        white-space: nowrap;
+        overflow-y: auto;
+        height: 10rem;
+        border: 2px solid black;
+        margin-top: 0.8rem;
+    }
+
+    .nav-main section {
+        height: 2rem;
+        border-bottom: 1px solid rgb(77, 78, 83);
+    }
+
+    #navbar header {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        color: black;
+        font-size: 1.8rem;
     }
 }
 
+.nav-section:hover {
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+}
 
+.nav-section {
+    scroll-behavior: smooth;
+    display: flex;
+    align-items: center;
+}
+
+.nav-main a {
+    text-decoration: none;
+    color: rgb(77, 78, 83);
+}
+
+
+.nav-section p{
+    vertical-align: middle;
+    text-indent: 2rem;
+}
