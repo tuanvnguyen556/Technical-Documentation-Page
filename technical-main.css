@@ -1,16 +1,14 @@
 @media (width > 820px){
     /*When the browser width reaches this size, 
     the main content is pushed 295 units away fron the left*/
-    #main-doc{
+
+    .main-section{
         display: flex;
         flex-direction: column;
         position: relative;
         left: 295px;
         flex-wrap: wrap;
-        width: 100%;
-
-    }
-    .main-section{
+        width: 1200px;
         z-index: -1;
     }
     
